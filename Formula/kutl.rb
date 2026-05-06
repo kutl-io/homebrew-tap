@@ -1,15 +1,15 @@
 class Kutl < Formula
   desc "Collaborative text synchronization tool"
   homepage "https://kutl.io"
-  version "0.1.4"
+  version "0.1.5"
   if OS.mac?
     if Hardware::CPU.arm?
-      url "https://github.com/kutl-io/kutl/releases/download/v0.1.4/kutl-aarch64-apple-darwin.tar.xz"
-      sha256 "43711af855f7dfa08d183139d6585511ed30993471e72274786b78299f0d0248"
+      url "https://github.com/kutl-io/kutl/releases/download/v0.1.5/kutl-aarch64-apple-darwin.tar.xz"
+      sha256 "32b35d0a95261872ef301e61c67fc70e04c5da30b9e465d9a78244393c2d10cc"
     end
     if Hardware::CPU.intel?
-      url "https://github.com/kutl-io/kutl/releases/download/v0.1.4/kutl-x86_64-apple-darwin.tar.xz"
-      sha256 "6547ac9d52a6760d08477b9f3e8d207cc7ebb5948ad806ab7c92ab40e43e2264"
+      url "https://github.com/kutl-io/kutl/releases/download/v0.1.5/kutl-x86_64-apple-darwin.tar.xz"
+      sha256 "b1ea6d7c62e6292a56aff5cdb1c7dc2f9d4416036515381282a9f09afafc1545"
     end
   end
   license any_of: ["MIT", "Apache-2.0"]
