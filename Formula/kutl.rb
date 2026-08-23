@@ -1,15 +1,15 @@
 class Kutl < Formula
   desc "Collaborative text synchronization tool"
   homepage "https://kutl.io"
-  version "0.4.1"
+  version "0.5.0"
   if OS.mac?
     if Hardware::CPU.arm?
-      url "https://github.com/kutl-io/kutl/releases/download/v0.4.1/kutl-aarch64-apple-darwin.tar.xz"
-      sha256 "b91a03e55e3dcea14ff9802224f03d1dc96e58f938634547b03b66d6a62d8e65"
+      url "https://github.com/kutl-io/kutl/releases/download/v0.5.0/kutl-aarch64-apple-darwin.tar.xz"
+      sha256 "8b7b722ed441c29ed4e464eae27cad4604e23426ea2f4138cd1e31822aecf56b"
     end
     if Hardware::CPU.intel?
-      url "https://github.com/kutl-io/kutl/releases/download/v0.4.1/kutl-x86_64-apple-darwin.tar.xz"
-      sha256 "d543da8c13f4ab94c3539ec519b63c2f920ec51ee00adffa72b36e445e337214"
+      url "https://github.com/kutl-io/kutl/releases/download/v0.5.0/kutl-x86_64-apple-darwin.tar.xz"
+      sha256 "dc98712fad86af7ac6e88b76f5093f9883fded890aad554dbc889a51c94174be"
     end
   end
   license any_of: ["MIT", "Apache-2.0"]
@@ -35,8 +35,12 @@ class Kutl < Formula
   end
 
   def install
-    bin.install "kutl" if OS.mac? && Hardware::CPU.arm?
-    bin.install "kutl" if OS.mac? && Hardware::CPU.intel?
+    if OS.mac? && Hardware::CPU.arm?
+      bin.install "kutl"
+    end
+    if OS.mac? && Hardware::CPU.intel?
+      bin.install "kutl"
+    end
 
     install_binary_aliases!
 
